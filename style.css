@@ -1,0 +1,315 @@
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #5170FF;
+  background-color: #ffffff;
+}
+
+.midasi {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+
+  z-index: 997;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu_sidebar {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #f1f1f1;
+  color: #999999;
+  padding: 7px;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 998;
+}
+
+
+.menu_image {
+  width: 40px;
+}
+
+.menu_sidebar.active {
+  transform: translateX(0);
+}
+
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transform-origin: center;
+}
+
+.menu_text {
+  font-size: 10px;
+  color: #333;
+  letter-spacing: 1px;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.hamburger-btn.active .hamburger-icon span:nth-child(1) {
+  transform: translateY(10.5px) rotate(45deg);
+}
+
+.hamburger-btn.active .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.active .hamburger-icon span:nth-child(3) {
+  transform: translateY(-10.5px) rotate(-45deg);
+}
+
+.hamburger-btn.active .menu_text {
+  opacity: 0;
+  transform: translateY(-3px);
+}
+
+#menu-btn {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  z-index: 999;
+}
+
+#log_out {
+  text-align: center;
+}
+#log_out h2 {
+  margin-top: 50px;
+}
+
+#login_btn {
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-family: "M PLUS Rounded 1c", sans-serif; 
+  font-weight: 700;
+  color: #5170ff;
+  cursor: pointer;
+  border-radius: 9999px; 
+  
+
+  background: rgba(255, 255, 255, 0.15); 
+  backdrop-filter: blur(16px);            
+  -webkit-backdrop-filter: blur(16px);    
+  
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4); 
+  transition: all 0.3s ease;
+}
+
+#login_btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 6px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transform: translateY(-1px);
+}
+
+#login_btn {
+  margin-top: 40px;
+}
+#login_btn_img {
+  width: 35px;
+  position: relative;
+  top: 3px;
+}
+#login_btn_login {
+  width: 35px;
+}
+#login_btn_text {
+  position: relative;
+  top: -8px;
+  left: 6px;
+}
+
+#menu_submit {
+  margin-top: 45px;
+}
+.menu_txt {
+  position: relative;
+  top: -40px;
+  left: 50px;
+}
+
+
+.glass-card {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(81, 112, 255, 0.15);
+  color: #333;
+}
+
+.dash_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(81, 112, 255, 0.2);
+  margin-bottom: 16px;
+}
+
+.user_info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user_avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #5170ff;
+  object-fit: cover;
+}
+
+.user_name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.logout_btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.logout_btn:hover {
+  background: rgba(239, 68, 68, 0.15);
+  color: #dc2626;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.logout_img {
+  width: 16px;
+  height: 16px;
+}
+
+.ochi_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ochi_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.ochi_badge {
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.ochi_value {
+  font-size: 0.9rem;
+  color: #444;
+  font-weight: 700;
+}
+
+.dash_actions {
+  display: flex;
+  gap: 12px;
+}
+
+.dash_action_btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(81, 112, 255, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.btn_submit {
+  background: linear-gradient(135deg, #5170ff 0%, #3b82f6 100%);
+}
+
+.btn_list {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.dash_action_btn:hover {
+  transform: translateY(-2px);
+}
