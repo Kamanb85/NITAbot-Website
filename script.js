@@ -158,7 +158,7 @@ async function fetchAndRenderDashboardStats(discordUserId) {
     if (!client) return;
 
     const { data: records, error } = await client
-        .from('records')
+        .from('nita_records')
         .select('*')
         .eq('user_id', discordUserId);
 
