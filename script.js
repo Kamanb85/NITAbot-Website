@@ -23,7 +23,7 @@ function calc_diff(player, wr) {
 function ochi(diff) {
     const ochi = Math.ceil(diff);
     if (ochi <= 0)
-        return 0;
+        return 1;
     else return ochi;
 }
 
